@@ -2,7 +2,7 @@ This repo is an offshoot from my rustOS project. It has its own repo to seperate
 Our minimal kernel is able to initialize the necessary hardware components, set up a basic execution environment, and write "Hello, World!" directly to the VGA buffer, thereby displaying the message on the screen :D
 
 Simple guideline:
-create bootimage with bootimage tool:
+create bootimage with bootimage tool (we use the bootimage tool to link our kernel to the bootloader from the bootloader dependency, making it possible to skip our own bootloader implementation):
 - install bootimage tool: cargo install bootimage
 - run bootimage tool (execute in project dir): cargo bootimage
 
