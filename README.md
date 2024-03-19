@@ -1,4 +1,4 @@
-This repo is an offshoot from my rustOS project. It has its own repo to seperate the step of creating a freesanding binary and minimal Kernel in Rust.
+This repo is an offshoot from my rustOS project. It has its own repo to seperate the step of creating a freesanding binary and minimal Kernel in Rust. <br>
 Our minimal kernel is able to initialize the necessary hardware components, set up a basic execution environment, and write "Hello, World!" directly to the VGA buffer, thereby displaying the message on the screen :D
 
 Simple guideline:
