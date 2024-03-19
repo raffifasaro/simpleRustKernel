@@ -15,15 +15,14 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
+static HELLO: &[u8] = b"Hello World!";
+
 //overwrite of entry point
 //no mangle to stop Rust from name mangling and outputs _start
-
-
-static HELLO: &[u8] = b"Hello World!";
 #[no_mangle]
 //"C" to use C calling convention
 pub extern "C" fn _start() -> ! {
-    //casting the int of our mem address into a raw pointer
+    //casting the int of our mem address of the VGA buffer into a raw pointer
     let vga_buffer = 0xb8000 as *mut u8;
 
     //iterating over bytes of HELLO string
