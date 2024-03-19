@@ -16,4 +16,4 @@ runner = "bootimage runner"
 (qemu should be started with "cargo run" with this setup
 
 After running, qemu should display a simple "Hello world" from the bootimage
-![image](https://github.com/raffifasaro/simpleRustKernel/assets/134242785/6a7ac54b-b9fd-4bce-9b7b-7eefb6013c47)
+![image](https://github.com/raffifasaro/simpleRustKernel/assets/134242785/5dd570ee-647f-4b94-834e-48f898bfc53c)
