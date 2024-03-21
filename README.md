@@ -17,3 +17,6 @@ runner = "bootimage runner"
 
 After running, qemu should display a simple "Hello World" from the bootimage
 ![image](https://github.com/raffifasaro/simpleRustKernel/assets/134242785/5dd570ee-647f-4b94-834e-48f898bfc53c)
+
+Disclaimer:<br>
+There are a lot of comments because I use this project myself to get more familiar with the Rust programming language, especially in low level use cases :)
