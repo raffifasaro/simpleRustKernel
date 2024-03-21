@@ -1,14 +1,14 @@
-This repo is an offshoot from my rustOS project. It has its own repo to seperate the step of creating a freesanding binary and minimal Kernel in Rust. <br>
+This repo is an offshoot from my rustOS project. It has its own repo to separate the step of creating a freestanding binary and minimal Kernel in Rust from further steps in OS development for more comprehensibility. <br>
 Our minimal kernel is able to initialize the necessary hardware components, set up a basic execution environment, and write "Hello, World!" directly to the VGA buffer, thereby displaying the message on the screen :D
 
 Simple guideline:
-create bootimage with bootimage tool:
+Create bootimage with bootimage tool (we use the bootimage tool to link our kernel to the bootloader from the bootloader dependency, making it possible to skip our own bootloader implementation):
 - install bootimage tool: cargo install bootimage
 - run bootimage tool (execute in project dir): cargo bootimage
 
-use the created bootimage with qemu: qemu-system-x86_64 -drive format=raw,file=target/x86_64-simpleRustKerneltt/debug/bootimage-simpleRustKernel.bin
+Use the created bootimage with qemu: qemu-system-x86_64 -drive format=raw,file=target/x86_64-simpleRustKerneltt/debug/bootimage-simpleRustKernel.bin
 OR
-let the bootloader tool config in the cargo config.toml handle it with:
+Let the bootloader tool config in the cargo config.toml handle it with:
 ```
 [target.'cfg(target_os = "none")']
 runner = "bootimage runner"
