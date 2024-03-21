@@ -3,7 +3,7 @@
 //no main because we don't want to use the normal entry point chain (Rust runtime, start from crt0...)
 #![no_main]
 
-//basically import of PanicInfo
+//"import" of PanicInfo
 use core::panic::PanicInfo;
 
 //#[] are attributes that are used to mark stuff for the current crate
